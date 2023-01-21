@@ -1,11 +1,11 @@
 import {StyleSheet} from 'react-native';
-import {colors} from '../../constants/themes/colors';
+import {colors} from '../../constants';
 
 export const styles = StyleSheet.create({
 	cardContainer: {
-		backgroundColor: colors.EerieBlack,
+		backgroundColor: colors.PrimaryColor,
 		borderRadius: 10,
-		shadowColor: colors.LightCyan,
+		shadowColor: colors.TextColor,
 		shadowOffset: {
 			width: 1,
 			height: 6,

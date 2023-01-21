@@ -1,15 +1,15 @@
 import {StyleSheet} from 'react-native';
-import {colors} from '../../constants/themes/colors';
+import {colors} from '../../constants';
 
 export const styles = StyleSheet.create({
 	headerContainer: {
 		paddingVertical: 50,
-		backgroundColor: colors.EerieBlack,
+		backgroundColor: colors.PrimaryColor,
 	},
 	headerContent: {
 		textAlign: 'center',
 		fontSize: 32,
 		fontWeight: 'bold',
-		color: colors.LightCyan,
+		color: colors.TextColor,
 	},
 });

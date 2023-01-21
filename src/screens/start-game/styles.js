@@ -1,16 +1,16 @@
 import {StyleSheet} from 'react-native';
-import {colors} from '../../constants/themes/colors';
+import {colors} from '../../constants';
 
 export const styles = StyleSheet.create({
 	container: {
 		flex: 1,
 		justifyContent: 'center',
 		alignItems: 'center',
-		backgroundColor: colors.RaisinBlack,
+		backgroundColor: colors.BGColor,
 	},
 	title: {
 		fontSize: 24,
-		color: colors.LightCyan,
+		color: colors.TextColor,
 		textAlign: 'center',
 		paddingVertical: 20,
 	},
@@ -22,13 +22,14 @@ export const styles = StyleSheet.create({
 	},
 	label: {
 		fontSize: 15,
-		color: colors.LightCyan,
+		color: colors.TextColor,
 		paddingVertical: 5,
 		textAlign: 'center',
 	},
 	input: {
 		width: '100%',
-		borderBottomColor: colors.LightCyan,
+		color: colors.TextColor,
+		borderBottomColor: colors.TextColor,
 		borderBottomWidth: 1,
 		minWidth: 70,
 		fontSize: 22,

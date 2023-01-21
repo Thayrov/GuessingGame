@@ -2,7 +2,7 @@ import {Button, Text, TextInput, View} from "react-native";
 
 import { Card } from "../../components";
 import React from "react";
-import { colors } from "../../constants/themes/colors";
+import { colors } from "../../constants";
 import {styles} from './styles'
 
 export const StartGame = () => {
@@ -15,10 +15,11 @@ export const StartGame = () => {
                 keyboardType="numeric" 
                 style={styles.input} 
                 placeholder='#'
+                placeholderTextColor={colors.TextColor}
                 />
             <View style={styles.buttonContainer}>
-                <Button title="Restart" onPress={()=>null} color={colors.IndianRed}/>
-                <Button title="Confirm" onPress={()=>null} color={colors.SteelBlue}/>
+                <Button title="Restart" onPress={()=>null} color={colors.WarningColor}/>
+                <Button title="Confirm" onPress={()=>null} color={colors.SecondaryColor}/>
             </View>
             </Card>
 
