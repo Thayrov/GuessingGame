@@ -23,6 +23,7 @@ export const StartGame = () => {
                 placeholder='#'
                 placeholderTextColor={colors.TextColor}
                 onChangeText={OnHandlerChange}
+                maxLength={2}
                 />
             <View style={styles.buttonContainer}>
                 <Button title="Restart" onPress={()=>null} color={colors.WarningColor}/>
