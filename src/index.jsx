@@ -1,5 +1,4 @@
-import {Card, Header} from './components';
-
+import {Header} from './components';
 import {StartGame} from './screens/index';
 import {StatusBar} from 'expo-status-bar';
 import {View} from 'react-native';

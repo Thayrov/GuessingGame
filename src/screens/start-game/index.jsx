@@ -1,14 +1,14 @@
 import {Alert, Button, Keyboard, Text, TextInput, TouchableWithoutFeedback, View} from "react-native";
+import { Card, NumberContainer } from "../../components";
 import React, {useState} from "react";
 
-import { Card } from "../../components";
 import { colors } from "../../constants";
 import {styles} from './styles'
 
 export const StartGame = () => {
     const [enteredValue, setEnteredValue] = useState('');
     const [confirmed, setConfirmed] = useState(false);
-    const [selectedNumber, setSelectedNumber] = useState(null);
+    const [selectedNumber, setSelectedNumber] = useState(false);
     
     const OnHandlerChange = (text) => {
         setEnteredValue(text.replace(/[^0-9]/g,''))
@@ -17,12 +17,31 @@ export const StartGame = () => {
         setEnteredValue('')
         setConfirmed(false)
     } 
-    const onHandlerConfirm = (enteredValue) => {
+    const onHandlerConfirm = () => {
         const chosenNumber = parseInt(enteredValue,10);
-        (isNaN(chosenNumber) || chosenNumber<=0 ||chosenNumber>99) ? 
-        Alert.alert('Wrong Number','Please use numbers between 1 and 99',[{text:'Got it', style: 'destructive', onPress:onHandlerReset}]) :
-        setConfirmed(true) && setSelectedNumber(chosenNumber) &&  setEnteredValue('')
-        }
+        if (isNaN(chosenNumber) || chosenNumber<=0 ||chosenNumber>99) { 
+        Alert.alert('Wrong Number','Please use numbers between 1 and 99',[{text:'Got it', style: 'destructive', onPress: onHandlerReset}]) 
+        } else {
+        setSelectedNumber(chosenNumber);
+        setEnteredValue('');
+        setConfirmed(true);
+        };
+    }
+    
+    const onHandlerStartGame= () => {
+    null}
+    
+    const Confirmed = () => confirmed ? (
+        <Card style={styles.confirmedContainer}>
+            <Text style={styles.confirmedTitle}>Selected number</Text>
+            <NumberContainer number={selectedNumber}/>
+            <Button 
+            title="Start Game"
+            onPress={onHandlerStartGame}
+            color={colors.PrimaryColor}/>
+        </Card>
+    ) : null;
+        
     return(
     <TouchableWithoutFeedback onPress={()=>{Keyboard.dismiss()}}>
         <View style={styles.container}>
@@ -43,6 +62,8 @@ export const StartGame = () => {
                 <Button title="Confirm" onPress={onHandlerConfirm} color={colors.SecondaryColor}/>
             </View>
             </Card>
+
+            <Confirmed/>
         </View>
     </TouchableWithoutFeedback>
     );

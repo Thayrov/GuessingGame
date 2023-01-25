@@ -44,4 +44,15 @@ export const styles = StyleSheet.create({
 		marginTop: 20,
 		marginLeft: 35,
 	},
+	confirmedContainer: {
+		width: '85%',
+		height: 180,
+		justifyContent: 'space-around',
+		alignItems: 'center',
+		marginVertical: 30,
+	},
+	confirmedTitle: {
+		fontSize: 16,
+		color: colors.TextColor,
+	},
 });
