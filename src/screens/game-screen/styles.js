@@ -9,13 +9,8 @@ export const styles = StyleSheet.create({
 		backgroundColor: colors.BGColor,
 		paddingBottom: 200,
 	},
-	title: {
-		fontSize: 24,
-		color: colors.TextColor,
-		textAlign: 'center',
-		paddingVertical: 20,
-	},
-	inputContainer: {
+
+	content: {
 		justifyContent: 'center',
 		alignItems: 'center',
 		marginHorizontal: 20,
@@ -43,16 +38,5 @@ export const styles = StyleSheet.create({
 		justifyContent: 'space-around',
 		marginTop: 20,
 		marginLeft: 35,
-	},
-	confirmedContainer: {
-		width: '85%',
-		height: 180,
-		justifyContent: 'space-around',
-		alignItems: 'center',
-		marginVertical: 30,
-	},
-	confirmedTitle: {
-		fontSize: 16,
-		color: colors.TextColor,
 	},
 });

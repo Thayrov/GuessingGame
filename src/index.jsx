@@ -8,7 +8,11 @@ import {styles} from './styles';
 
 const App = () => {
 const[userNumber,SetUserNumber]=useState(null)
-const Content =() => userNumber ? <GameScreen/> : <StartGame/>
+
+const onHandlerStartGame =(selectedNumber)=>{
+	SetUserNumber(selectedNumber)};
+	
+const Content =() => userNumber ? <GameScreen selectedNumber={userNumber}/> : <StartGame onHandlerStartGame={onHandlerStartGame}/>
 	return (
 		<View style={styles.container}>
 			<StatusBar style="auto" />

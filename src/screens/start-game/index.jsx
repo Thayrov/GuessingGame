@@ -5,7 +5,7 @@ import React, {useState} from "react";
 import { colors } from "../../constants";
 import {styles} from './styles'
 
-export const StartGame = () => {
+export const StartGame = ( {onHandlerStartGame} ) => {
     const [enteredValue, setEnteredValue] = useState('');
     const [confirmed, setConfirmed] = useState(false);
     const [selectedNumber, setSelectedNumber] = useState(false);
@@ -29,7 +29,7 @@ export const StartGame = () => {
     }
     
     const onHandlerStartGame= () => {
-    null}
+        onHandlerStartGame(selectedNumber)};
     
     const Confirmed = () => confirmed ? (
         <Card style={styles.confirmedContainer}>
