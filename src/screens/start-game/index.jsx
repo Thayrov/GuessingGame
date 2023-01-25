@@ -40,7 +40,7 @@ export const StartGame = ( {onHandlerStartGame} ) => {
             <Button 
             title="Start Game"
             onPress={onUserStartGame}
-            color={colors.PrimaryColor}/>
+            color={colors.SecondaryColor}/>
         </Card>
     ) : null;
         

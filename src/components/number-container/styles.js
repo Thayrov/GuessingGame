@@ -3,11 +3,13 @@ import {colors} from '../../constants';
 
 export const styles = StyleSheet.create({
 	container: {
-		width: 50,
-		height: 50,
+		width: 80,
+		height: 80,
+		marginTop: 18,
+		marginBottom: 5,
 		justifyContent: 'center',
 		alignItems: 'center',
-		backgroundColor: colors.SecondaryColor,
+		backgroundColor: colors.BGColor,
 		borderColor: colors.PrimaryColor,
 		borderWidth: 2,
 		borderRadius: 5,
@@ -21,7 +23,8 @@ export const styles = StyleSheet.create({
 		elevation: 12,
 	},
 	number: {
-		fontSize: 20,
-		fontWeight: 'bold',
+		fontSize: 26,
+		fontFamily: 'Silkscreen-Bold',
+		color: colors.TextColor,
 	},
 });

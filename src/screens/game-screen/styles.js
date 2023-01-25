@@ -21,6 +21,7 @@ export const styles = StyleSheet.create({
 		color: colors.TextColor,
 		paddingVertical: 5,
 		textAlign: 'center',
+		fontFamily: 'Silkscreen-Regular',
 	},
 	input: {
 		width: '100%',
@@ -31,6 +32,7 @@ export const styles = StyleSheet.create({
 		fontSize: 22,
 		paddingVertical: 10,
 		textAlign: 'center',
+		fontFamily: 'Silkscreen-Regular',
 	},
 	buttonContainer: {
 		flexDirection: 'row',

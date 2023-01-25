@@ -9,7 +9,7 @@ export const styles = StyleSheet.create({
 	headerContent: {
 		textAlign: 'center',
 		fontSize: 32,
-		fontWeight: 'bold',
+		fontFamily: 'Silkscreen-Bold',
 		color: colors.TextColor,
 	},
 });

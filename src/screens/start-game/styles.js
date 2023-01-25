@@ -14,6 +14,7 @@ export const styles = StyleSheet.create({
 		color: colors.TextColor,
 		textAlign: 'center',
 		paddingVertical: 20,
+		fontFamily: 'Silkscreen-Regular',
 	},
 	inputContainer: {
 		justifyContent: 'center',
@@ -26,6 +27,7 @@ export const styles = StyleSheet.create({
 		color: colors.TextColor,
 		paddingVertical: 5,
 		textAlign: 'center',
+		fontFamily: 'Silkscreen-Regular',
 	},
 	input: {
 		width: '100%',
@@ -36,6 +38,7 @@ export const styles = StyleSheet.create({
 		fontSize: 22,
 		paddingVertical: 10,
 		textAlign: 'center',
+		fontFamily: 'Silkscreen-Regular',
 	},
 	buttonContainer: {
 		flexDirection: 'row',
@@ -54,5 +57,6 @@ export const styles = StyleSheet.create({
 	confirmedTitle: {
 		fontSize: 16,
 		color: colors.TextColor,
+		fontFamily: 'Silkscreen-Regular',
 	},
 });
