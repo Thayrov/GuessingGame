@@ -8,7 +8,7 @@ import {styles} from './styles'
 export const StartGame = ( {onHandlerStartGame} ) => {
     const [enteredValue, setEnteredValue] = useState('');
     const [confirmed, setConfirmed] = useState(false);
-    const [selectedNumber, setSelectedNumber] = useState(false);
+    const [selectedNumber, setSelectedNumber] = useState(null);
     
     const OnHandlerChange = (text) => {
         setEnteredValue(text.replace(/[^0-9]/g,''))
@@ -20,15 +20,17 @@ export const StartGame = ( {onHandlerStartGame} ) => {
     const onHandlerConfirm = () => {
         const chosenNumber = parseInt(enteredValue,10);
         if (isNaN(chosenNumber) || chosenNumber<=0 ||chosenNumber>99) { 
-        Alert.alert('Wrong Number','Please use numbers between 1 and 99',[{text:'Got it', style: 'destructive', onPress: onHandlerReset}]) 
+        Alert.alert('Wrong Number','Please use numbers between 1 and 99',[
+        {text:'Got it', style: 'destructive', onPress: onHandlerReset}
+        ]); 
         } else {
+        setConfirmed(true);
         setSelectedNumber(chosenNumber);
         setEnteredValue('');
-        setConfirmed(true);
         };
     }
     
-    const onHandlerStartGame= () => {
+    const onUserStartGame= () => {
         onHandlerStartGame(selectedNumber)};
     
     const Confirmed = () => confirmed ? (
@@ -37,7 +39,7 @@ export const StartGame = ( {onHandlerStartGame} ) => {
             <NumberContainer number={selectedNumber}/>
             <Button 
             title="Start Game"
-            onPress={onHandlerStartGame}
+            onPress={onUserStartGame}
             color={colors.PrimaryColor}/>
         </Card>
     ) : null;

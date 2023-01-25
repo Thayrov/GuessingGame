@@ -9,10 +9,10 @@ import {styles} from './styles';
 const App = () => {
 const[userNumber,SetUserNumber]=useState(null)
 
-const onHandlerStartGame =(selectedNumber)=>{
-	SetUserNumber(selectedNumber)};
+const onHandlerStartGame =(daNumber)=>{
+	SetUserNumber(daNumber)};
 	
-const Content =() => userNumber ? <GameScreen selectedNumber={userNumber}/> : <StartGame onHandlerStartGame={onHandlerStartGame}/>
+const Content =() => userNumber ? <GameScreen daNumber={userNumber}/> : <StartGame onHandlerStartGame={onHandlerStartGame}/>
 	return (
 		<View style={styles.container}>
 			<StatusBar style="auto" />

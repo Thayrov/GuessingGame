@@ -1,4 +1,4 @@
-import {Alert, Button, Keyboard, Text, TextInput, TouchableWithoutFeedback, View} from "react-native";
+import {Button, Text, View} from "react-native";
 import { Card, NumberContainer } from "../../components";
 import React, {useState} from "react";
 
@@ -19,7 +19,7 @@ export const GameScreen = ({selectedNumber}) => {
         <View style={styles.container}>
             <Card style={styles.content}>
                 <Text style={styles.label} >Opponent's number</Text>
-                <NumberContainer  number={selectedNumber}/>
+                <NumberContainer  number={currentGuess}/>
                 <View style={styles.buttonContainer}>
                     <Button title="minus" onPress={()=>{}} color={colors.WarningColor}/>
                     <Button title="plus" onPress={()=>{}} color={colors.SecondaryColor}/>
