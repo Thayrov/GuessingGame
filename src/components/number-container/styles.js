@@ -1,12 +1,14 @@
-import {StyleSheet} from 'react-native';
+import {Dimensions, StyleSheet} from 'react-native';
+
 import {colors} from '../../constants';
+
+const {width, height} = Dimensions.get('screen');
 
 export const styles = StyleSheet.create({
 	container: {
-		width: 80,
-		height: 80,
-		marginTop: 18,
-		marginBottom: 5,
+		height: height * 0.08,
+		width: width * 0.17,
+		marginVertical: height * 0.02,
 		justifyContent: 'center',
 		alignItems: 'center',
 		backgroundColor: colors.BGColor,
@@ -23,7 +25,7 @@ export const styles = StyleSheet.create({
 		elevation: 12,
 	},
 	number: {
-		fontSize: 26,
+		fontSize: height * 0.03,
 		fontFamily: 'Silkscreen-Bold',
 		color: colors.TextColor,
 	},

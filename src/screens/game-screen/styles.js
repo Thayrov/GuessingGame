@@ -1,5 +1,8 @@
-import {StyleSheet} from 'react-native';
+import {Dimensions, StyleSheet} from 'react-native';
+
 import {colors} from '../../constants';
+
+const {width, height} = Dimensions.get('screen');
 
 export const styles = StyleSheet.create({
 	container: {
@@ -7,38 +10,28 @@ export const styles = StyleSheet.create({
 		justifyContent: 'center',
 		alignItems: 'center',
 		backgroundColor: colors.BGColor,
-		paddingBottom: 200,
+		paddingBottom: height * 0.1,
 	},
 
 	content: {
 		justifyContent: 'center',
 		alignItems: 'center',
-		marginHorizontal: 20,
-		paddingVertical: 20,
+		marginHorizontal: width * 0.04,
+		paddingVertical: height * 0.04,
 	},
 	label: {
-		fontSize: 15,
+		fontSize: height * 0.02,
 		color: colors.TextColor,
-		paddingVertical: 5,
+		paddingVertical: height * 0.01,
 		textAlign: 'center',
 		fontFamily: 'Silkscreen-Regular',
 	},
-	input: {
-		width: '100%',
-		color: colors.TextColor,
-		borderBottomColor: colors.TextColor,
-		borderBottomWidth: 1,
-		minWidth: 70,
-		fontSize: 22,
-		paddingVertical: 10,
-		textAlign: 'center',
-		fontFamily: 'Silkscreen-Regular',
-	},
+
 	buttonContainer: {
 		flexDirection: 'row',
 		width: '75%',
 		justifyContent: 'space-around',
-		marginTop: 20,
-		marginLeft: 35,
+		paddingTop: height * 0.02,
+		paddingLeft: width * 0.06,
 	},
 });

@@ -1,5 +1,8 @@
-import {StyleSheet} from 'react-native';
+import {Dimensions, StyleSheet} from 'react-native';
+
 import {colors} from '../../constants';
+
+const {width, height} = Dimensions.get('screen');
 
 export const styles = StyleSheet.create({
 	container: {
@@ -7,25 +10,25 @@ export const styles = StyleSheet.create({
 		justifyContent: 'center',
 		alignItems: 'center',
 		backgroundColor: colors.BGColor,
-		paddingBottom: 200,
+		paddingBottom: height * 0.1,
 	},
 	title: {
-		fontSize: 24,
+		fontSize: height * 0.03,
 		color: colors.TextColor,
 		textAlign: 'center',
-		paddingVertical: 20,
+		paddingVertical: height * 0.02,
 		fontFamily: 'Silkscreen-Regular',
 	},
 	inputContainer: {
 		justifyContent: 'center',
 		alignItems: 'center',
-		marginHorizontal: 20,
-		paddingVertical: 20,
+		marginHorizontal: height * 0.02,
+		paddingVertical: height * 0.02,
 	},
 	label: {
-		fontSize: 15,
+		fontSize: height * 0.02,
 		color: colors.TextColor,
-		paddingVertical: 5,
+		paddingVertical: height * 0.005,
 		textAlign: 'center',
 		fontFamily: 'Silkscreen-Regular',
 	},
@@ -34,9 +37,9 @@ export const styles = StyleSheet.create({
 		color: colors.TextColor,
 		borderBottomColor: colors.TextColor,
 		borderBottomWidth: 1,
-		minWidth: 70,
-		fontSize: 22,
-		paddingVertical: 10,
+		minWidth: width * 0.14,
+		fontSize: height * 0.03,
+		paddingVertical: height * 0.01,
 		textAlign: 'center',
 		fontFamily: 'Silkscreen-Regular',
 	},
@@ -44,18 +47,20 @@ export const styles = StyleSheet.create({
 		flexDirection: 'row',
 		width: '75%',
 		justifyContent: 'space-around',
-		marginTop: 20,
-		marginLeft: 35,
+		paddingTop: height * 0.02,
+		paddingLeft: width * 0.06,
 	},
 	confirmedContainer: {
-		width: '85%',
-		height: 180,
+		width: '75%',
+		height: height * 0.2,
 		justifyContent: 'space-around',
 		alignItems: 'center',
-		marginVertical: 30,
+		marginVertical: height * 0.03,
+		paddingBottom: height * 0.025,
 	},
 	confirmedTitle: {
-		fontSize: 16,
+		paddingTop: height * 0.02,
+		fontSize: height * 0.02,
 		color: colors.TextColor,
 		fontFamily: 'Silkscreen-Regular',
 	},

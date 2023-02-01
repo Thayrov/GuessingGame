@@ -1,14 +1,18 @@
-import {StyleSheet} from 'react-native';
+import {Dimensions, StyleSheet} from 'react-native';
+
 import {colors} from '../../constants';
+
+const {height} = Dimensions.get('screen');
 
 export const styles = StyleSheet.create({
 	headerContainer: {
-		paddingVertical: 50,
+		paddingTop: height * 0.06,
+		height: height * 0.15,
 		backgroundColor: colors.PrimaryColor,
 	},
 	headerContent: {
 		textAlign: 'center',
-		fontSize: 32,
+		fontSize: height * 0.03,
 		fontFamily: 'Silkscreen-Bold',
 		color: colors.TextColor,
 	},
