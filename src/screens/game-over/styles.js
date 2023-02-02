@@ -4,14 +4,14 @@ import {colors} from '../../constants';
 
 const {width, height} = Dimensions.get('screen');
 
-export const style = StyleSheet.create({
+export const styles = StyleSheet.create({
 	container: {
 		flex: 1,
 		backgroundColor: colors.BGColor,
 		alignItems: 'center',
 		justifyContent: 'center',
 		paddingBottom: height * 0.1,
-		width: width * 0.8,
+		width: width,
 	},
 	label: {
 		fontSize: height * 0.02,
@@ -23,10 +23,10 @@ export const style = StyleSheet.create({
 
 	buttonContainer: {
 		flexDirection: 'row',
-		width: '75%',
+		width: '70%',
 		justifyContent: 'space-around',
 		paddingTop: height * 0.02,
-		paddingLeft: width * 0.06,
+		paddingLeft: width * 0.15,
 	},
 	content: {
 		justifyContent: 'center',
@@ -35,7 +35,7 @@ export const style = StyleSheet.create({
 		paddingVertical: height * 0.04,
 	},
 	image: {
-		width: width * 0.2,
+		width: width * 0.55,
 		height: height * 0.2,
 	},
 });

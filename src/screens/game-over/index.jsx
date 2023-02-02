@@ -4,17 +4,17 @@ import {Card} from '../../components';
 import {colors} from '../../constants';
 import {styles} from './styles';
 
-const GameOver = (tries, selectedNumber, onHandlerRestart) => {
+const GameOver = ({tries, daNumber, onHandlerRestart}) => {
 	return (
 		<View style={styles.container}>
 			<Card style={styles.content}>
+				<Text style={styles.label}>Game Over</Text>
 				<Image
-					source={{uri: '../../../assets/img/undraw_old_day_-6-x25.svg'}}
+					source={require('../../../assets/img/undraw_old_day.png')}
 					style={styles.image}
 				/>
-				<Text style={styles.label}>
-					You got the number {selectedNumber} in {tries} tries
-				</Text>
+				<Text style={styles.label}>You got the number {daNumber}</Text>
+				<Text style={styles.label}>In {tries} tries</Text>
 				<View style={styles.buttonContainer}>
 					<Button
 						title="restart"

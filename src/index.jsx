@@ -1,12 +1,12 @@
 import {ActivityIndicator, View} from 'react-native';
-import {GameOver, GameScreen, StartGame} from './screens/index';
-import React, {useState} from 'react';
+import {GameOver, GameScreen, StartGame} from './screens';
 
 import {Header} from './components';
 import {StatusBar} from 'expo-status-bar';
 import {colors} from './constants';
 import {styles} from './styles';
 import {useFonts} from 'expo-font';
+import {useState} from 'react';
 
 const App = () => {
 	const [loaded] = useFonts({
@@ -39,7 +39,7 @@ const App = () => {
 			return (
 				<GameOver
 					tries={triedTries}
-					selectedNumber={userNumber}
+					daNumber={userNumber}
 					onHandlerRestart={onHandlerRestart}
 				/>
 			);

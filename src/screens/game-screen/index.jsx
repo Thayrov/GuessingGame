@@ -15,20 +15,20 @@ const RNG = (min, max, exclude) => {
 		return randomNumber;
 	}
 };
-const GameScreen = ({selectedNumber, onHandleGameOver}) => {
-	const [currentGuess, setCurrentGuess] = useState(RNG(1, 100, selectedNumber));
+const GameScreen = ({daNumber, onHandleGameOver}) => {
+	const [currentGuess, setCurrentGuess] = useState(RNG(1, 100, daNumber));
 	const [tries, setTries] = useState(0);
 	const currentLow = useRef(1);
 	const currentHigh = useRef(100);
 
 	useEffect(() => {
-		if (currentGuess === selectedNumber) onHandleGameOver(tries);
-	}, [currentGuess, selectedNumber, onHandleGameOver]);
+		if (currentGuess === daNumber) onHandleGameOver(tries);
+	}, [currentGuess, daNumber, onHandleGameOver]);
 
 	const onHandlerNextGuess = direction => {
 		if (
-			(direction === 'lower' && currentGuess < selectedNumber) ||
-			(direction === 'higher' && currentGuess > selectedNumber)
+			(direction === 'lower' && currentGuess < daNumber) ||
+			(direction === 'higher' && currentGuess > daNumber)
 		) {
 			Alert.alert('Try again', 'You are trying the wrong direction', [
 				{text: 'Continue', style: 'cancel'},
