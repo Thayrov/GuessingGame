@@ -24,6 +24,11 @@ const App = () => {
 		SetTriedTries(tries);
 	};
 
+	const onHandlerRestart = () => {
+		SetUserNumber(null);
+		SetTriedTries(0);
+	};
+
 	const Content = () => {
 		if (userNumber && triedTries <= 0) {
 			return (
@@ -31,7 +36,13 @@ const App = () => {
 			);
 		}
 		if (triedTries > 0) {
-			return <GameOver />;
+			return (
+				<GameOver
+					tries={triedTries}
+					selectedNumber={userNumber}
+					onHandlerRestart={onHandlerRestart}
+				/>
+			);
 		}
 		return <StartGame onHandlerStartGame={onHandlerStartGame} />;
 	};

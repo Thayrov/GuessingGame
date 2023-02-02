@@ -1,22 +1,24 @@
-import {Button, Text, View} from 'react-native';
-import {Card, NumberContainer} from '../../components';
-import React, {useEffect, useRef, useState} from 'react';
+import {Button, Image, Text, View} from 'react-native';
 
+import {Card} from '../../components';
 import {colors} from '../../constants';
 import {styles} from './styles';
 
-const GameOver = () => {
+const GameOver = (tries, selectedNumber, onHandlerRestart) => {
 	return (
 		<View style={styles.container}>
 			<Card style={styles.content}>
+				<Image
+					source={{uri: '../../../assets/img/undraw_old_day_-6-x25.svg'}}
+					style={styles.image}
+				/>
 				<Text style={styles.label}>
-					You finished in the amount of tries shown below
+					You got the number {selectedNumber} in {tries} tries
 				</Text>
-				{/* <NumberContainer number={currentGuess} /> */}
 				<View style={styles.buttonContainer}>
 					<Button
 						title="restart"
-						onPress={() => {}}
+						onPress={onHandlerRestart}
 						color={colors.SecondaryColor}
 					/>
 				</View>

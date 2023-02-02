@@ -28,4 +28,14 @@ export const style = StyleSheet.create({
 		paddingTop: height * 0.02,
 		paddingLeft: width * 0.06,
 	},
+	content: {
+		justifyContent: 'center',
+		alignItems: 'center',
+		marginHorizontal: width * 0.04,
+		paddingVertical: height * 0.04,
+	},
+	image: {
+		width: width * 0.2,
+		height: height * 0.2,
+	},
 });
