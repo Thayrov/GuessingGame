@@ -1,4 +1,4 @@
-import {Dimensions, StyleSheet} from 'react-native';
+import {Dimensions, StatusBar, StyleSheet} from 'react-native';
 
 import {colors} from '../../constants';
 
@@ -6,7 +6,7 @@ const {height} = Dimensions.get('screen');
 
 export const styles = StyleSheet.create({
 	headerContainer: {
-		paddingTop: height * 0.06,
+		paddingTop: StatusBar.currentHeight * 1.5,
 		height: height * 0.15,
 		backgroundColor: colors.PrimaryColor,
 	},
