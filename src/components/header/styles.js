@@ -6,8 +6,8 @@ const {height} = Dimensions.get('screen');
 
 export const styles = StyleSheet.create({
 	headerContainer: {
-		paddingTop: StatusBar.currentHeight * 1.5,
-		height: height * 0.15,
+		paddingTop: StatusBar.currentHeight,
+		height: height * 0.1,
 		backgroundColor: colors.PrimaryColor,
 	},
 	headerContent: {

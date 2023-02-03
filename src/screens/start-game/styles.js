@@ -5,11 +5,13 @@ import {colors} from '../../constants';
 const {width, height} = Dimensions.get('screen');
 
 export const styles = StyleSheet.create({
-	container: {
+	containerExternal: {
 		flex: 1,
+		backgroundColor: colors.BGColor,
+	},
+	container: {
 		justifyContent: 'center',
 		alignItems: 'center',
-		backgroundColor: colors.BGColor,
 		paddingBottom: height * 0.1,
 	},
 	title: {
@@ -46,15 +48,15 @@ export const styles = StyleSheet.create({
 	buttonContainer: {
 		flexDirection: 'row',
 		width: '75%',
-		justifyContent: 'space-around',
+		justifyContent: 'space-evenly',
 		paddingTop: height * 0.02,
-		paddingLeft: width * 0.06,
 	},
 	confirmedContainer: {
-		width: '75%',
 		height: height * 0.2,
 		justifyContent: 'space-around',
 		alignItems: 'center',
+		marginHorizontal: height * 0.02,
+
 		marginVertical: height * 0.03,
 		paddingBottom: height * 0.025,
 	},

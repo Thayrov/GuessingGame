@@ -4,18 +4,28 @@ import {Card} from '../../components';
 import {colors} from '../../constants';
 import {styles} from './styles';
 
-const GameOver = ({tries, daNumber, onHandlerRestart}) => {
+const GameOver = ({isPortrait, tries, daNumber, onHandlerRestart}) => {
 	return (
-		<View style={styles.container}>
-			<Card style={styles.content}>
-				<Text style={styles.label}>Game Over</Text>
+		<View style={isPortrait ? styles.container : styles.landscapeContainer}>
+			<Card style={isPortrait ? styles.content : styles.landscapeContent}>
 				<Image
 					source={require('../../../assets/img/undraw_old_day.png')}
-					style={styles.image}
+					style={isPortrait ? styles.image : styles.landscapeImage}
 				/>
-				<Text style={styles.label}>You got the number {daNumber}</Text>
-				<Text style={styles.label}>In {tries} tries</Text>
-				<View style={styles.buttonContainer}>
+				<Text style={styles.label}>
+					Game Over
+					{'\n'}
+					{'\n'}
+					You got the number {daNumber}
+					{'\n'}
+					In {tries} tries
+				</Text>
+				<View
+					style={
+						isPortrait
+							? styles.buttonContainer
+							: styles.landscapeButtonContainer
+					}>
 					<Button
 						title="restart"
 						onPress={onHandlerRestart}

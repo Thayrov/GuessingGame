@@ -1,12 +1,12 @@
-import {ActivityIndicator, View} from 'react-native';
+import {ActivityIndicator, Dimensions, View} from 'react-native';
 import {GameOver, GameScreen, StartGame} from './screens';
+import {useEffect, useState} from 'react';
 
 import {Header} from './components';
 import {StatusBar} from 'expo-status-bar';
 import {colors} from './constants';
 import {styles} from './styles';
 import {useFonts} from 'expo-font';
-import {useState} from 'react';
 
 const App = () => {
 	const [loaded] = useFonts({
@@ -15,6 +15,25 @@ const App = () => {
 	});
 	const [userNumber, SetUserNumber] = useState(null);
 	const [triedTries, SetTriedTries] = useState(0);
+
+	//---------------------------------------------
+	const [isPortrait, setIsPortrait] = useState(true);
+	const onPortrait = () => {
+		const dim = Dimensions.get('screen');
+		return dim.height >= dim.width;
+	};
+
+	const statePortrait = () => {
+		setIsPortrait(onPortrait);
+	};
+
+	useEffect(() => {
+		const subscription = Dimensions.addEventListener('change', statePortrait);
+		return () => {
+			subscription.remove();
+		};
+	});
+	//---------------------------------------------
 
 	const onHandlerStartGame = selectedNumber => {
 		SetUserNumber(selectedNumber);
@@ -41,6 +60,7 @@ const App = () => {
 					tries={triedTries}
 					daNumber={userNumber}
 					onHandlerRestart={onHandlerRestart}
+					isPortrait={isPortrait}
 				/>
 			);
 		}

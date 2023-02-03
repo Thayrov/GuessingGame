@@ -10,9 +10,9 @@ export const styles = StyleSheet.create({
 		justifyContent: 'center',
 		alignItems: 'center',
 		backgroundColor: colors.BGColor,
-		paddingBottom: height * 0.1,
+		paddingVertical: height * 0.05,
+		height: height * 0.8,
 	},
-
 	content: {
 		justifyContent: 'center',
 		alignItems: 'center',
@@ -20,9 +20,9 @@ export const styles = StyleSheet.create({
 		paddingVertical: height * 0.04,
 	},
 	label: {
-		fontSize: height * 0.02,
+		fontSize: ((height * width) / 1000) * 0.04,
 		color: colors.TextColor,
-		paddingVertical: height * 0.01,
+		paddingVertical: ((height * width) / 1000) * 0.01,
 		textAlign: 'center',
 		fontFamily: 'Silkscreen-Regular',
 	},
@@ -30,8 +30,7 @@ export const styles = StyleSheet.create({
 	buttonContainer: {
 		flexDirection: 'row',
 		width: '75%',
-		justifyContent: 'space-around',
-		paddingTop: height * 0.02,
-		paddingLeft: width * 0.06,
+		justifyContent: 'space-evenly',
+		paddingTop: ((height * width) / 1000) * 0.05,
 	},
 });
